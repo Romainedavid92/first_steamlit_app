@@ -1,4 +1,8 @@
 import streamlit
+import pandas
+
+#import data
+my_fruit_list = pandas.read_csv(""https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt"")
 
 # title
 streamlit.title('My Parents New Healthy Diner')
@@ -12,3 +16,6 @@ streamlit.text('🥑🍞 Avocado Toast')
 
 #specials Header
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+
+# fruit dataframe 
+streamlit.dataframe(my_fruit_list) # pandas df turned to streamlist df
