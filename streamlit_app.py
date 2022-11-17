@@ -18,7 +18,7 @@ streamlit.text('🥑🍞 Avocado Toast')
 #specials Header
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Avocado','Strawberries'])
 
 # fruit dataframe 
 streamlit.dataframe(my_fruit_list) # pandas df turned to streamlist df
