@@ -54,4 +54,4 @@ streamlit.text(f"Thanks for adding {second_fruit_variable}!")
 
 streamlit.stop()
 
-my_cur.execute(insert into fruit_load_list values ('test from streamlit'));
+my_cur.execute("insert into fruit_load_list values ('test from streamlit')");
