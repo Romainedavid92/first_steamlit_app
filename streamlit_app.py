@@ -2,6 +2,7 @@ import streamlit
 import pandas
 import requests
 import snowflake.connector
+from urllib.error import URLERROR
 
 #import data
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -50,3 +51,7 @@ streamlit.dataframe(my_data_row)
 
 second_fruit_variable = streamlit.text_input('What fruit would you like to add?','jackfruit')
 streamlit.text(f"Thanks for adding {second_fruit_variable}!")
+
+streamlit.stop()
+
+my_cur.execute(insert into fruit_load_list values ('test from streamlit'));
