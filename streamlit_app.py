@@ -31,4 +31,4 @@ streamlit.dataframe(fruits_to_show) # pandas df turned to streamlist df
 
 streamlit.header('Fruityvice Fruit Advice!')
 
-streamlist.text(fruityvice_response.json())
+streamlit.text(fruityvice_response.json())
