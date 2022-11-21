@@ -12,7 +12,7 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 
 my_cur.execute("SELECT * FROM fruit_load_list")
-my_data_row = my_cur.fetchone()
+my_data_row = my_cur.fetchall()
 
 # title
 streamlit.title('My Parents New Healthy Diner')
@@ -45,4 +45,5 @@ fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{fruit_var
 fruity_vice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruity_vice_normalized)
 
-streamlit.text(f"The fruit load list contains: {my_data_row}")
+streamlit.header("The fruit load list contains:")
+streamlit.dataframe(my_data_row)
