@@ -45,4 +45,4 @@ fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{fruit_var
 fruity_vice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruity_vice_normalized)
 
-streamlit.txt(f"Hello from snowflake:{my_data_row}")
+streamlit.text(f"Hello from snowflake:{my_data_row}")
