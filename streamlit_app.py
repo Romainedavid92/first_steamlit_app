@@ -8,8 +8,6 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # api request
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
-
 
 # title
 streamlit.title('My Parents New Healthy Diner')
@@ -29,3 +27,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # fruit dataframe 
 streamlit.dataframe(fruits_to_show) # pandas df turned to streamlist df
+
+
+streamlit.header('Fruityvice Fruit Advice!')
+
+streamlist.text(fruityvice_response.json())
